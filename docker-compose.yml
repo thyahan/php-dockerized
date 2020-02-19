@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+  php_server:
+    build: www/
+    tty: true
+    ports:
+      - 8083:80
+    container_name: php_server
+    volumes:
+      - ./www/src/:/var/www/html
